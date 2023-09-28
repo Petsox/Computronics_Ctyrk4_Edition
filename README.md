@@ -11,6 +11,16 @@
 
 
 Computronics is an addon for ComputerCraft and OpenComputers, also adding integration to a lot of other mods.
+### Ctyrk4 Edition
+
+Fixed Digital Boxes, so they can handle OFF aspects, Finally.
+Bumped max connections to 128 instead of 32.
+
+Removed MaryTTS stuff
+Removed Applied Energ. stuff
+Removed Flamingo stuff
+Removed Armourer's workshop
+
 ### Downloads
 The mod's downloads can be found at https://wiki.vexatos.com/wiki:computronics.
 ### License
@@ -23,15 +33,12 @@ This is the repository for the Computronics Minecraft mod.
 | Mod | Version | Author | URL |
 | --- | ------- | ------ | --- |
 | APIs* | 1.0 | javac | [GitHub](https://github.com/asiekierka/Computronics/blob/master/libs/APIs.zip) |
-| Applied Energistics 2*  | rv2-stable-1 | Walrus Technologies Ltd | [Website](http://ae2.ae-mod.info/) |
 | AsieLib* | randomly chosen | asie/Vexatos | [GitHub](https://github.com/asiekierka/AsieLib) |
-| Armourer's Workshop* | 0.33.0.85 | RiskyKen | [Jenkins repo](http://jenkins.rx14.co.uk/job/RiskyKen/job/Armourers-Workshop/) |
 | BestModEver* | 1.7.10 | Notch, jeb, Dinnerbone and others | [Website](http://minecraft.net) |
 | BuildCraft* | 6.4.1 | SpaceToad | [Website](http://mod-buildcraft.com/) |
 | Computronics* | latest | asie/Vexatos | [GitHub](https://github.com/asiekierka/Computronics) |
 | EnderIO* | 2.3.0.368_beta | CrazyPants, tterrag | [Website](http://enderio.com) |
 | Factorization* | 0.8.87.1 | neptunepink | [MCF](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1284592-factorization-0-8-88-8-8888-the-update-that-ate) |
-| Flamingo | 1.3 | copygirl/Vexatos | [Github](https://github.com/Vexatos/Flamingo/releases) |
 | Forestry* | 3.5.3.11 | Sengir (don't confuse with Sangar), CovertJaguar, mezz | [Secret hideout](http://ic2api.player.to:8080/job/Forestry/) |
 | Gendustry | 1.4.14.99-mc1.7.10-api | bdew | [bdew's jenkins repo](http://jenkins.bdew.net/job/gendustry-1.7.10/) |
 | GregTech | 5.07.07 | GregoriousT | [IC2 Forums](http://forum.industrial-craft.net/index.php?page=Thread&threadID=7156&) |
