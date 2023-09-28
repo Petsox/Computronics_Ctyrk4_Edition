@@ -27,7 +27,6 @@ public class ChatBoxUtils {
 				EntityPlayer player = (EntityPlayer) o;
 				if(sendToAll || (player.worldObj.provider.dimensionId == worldObj.provider.dimensionId
 					&& player.getDistanceSq(xCoord, yCoord, zCoord) < distance * distance)) {
-					player.addChatMessage(component.createCopy());
 				}
 			}
 		} catch(Exception e) {

@@ -9,8 +9,8 @@ import li.cil.oc.api.machine.Callback;
 import li.cil.oc.api.machine.Context;
 import mods.railcraft.api.core.WorldCoordinate;
 import mods.railcraft.api.signals.IControllerTile;
-import mods.railcraft.api.signals.SignalAspect;
 import mods.railcraft.api.signals.SignalController;
+import mods.railcraft.api.signals.SignalAspect;
 import mods.railcraft.common.blocks.signals.ISignalTileDefinition;
 import mods.railcraft.common.util.misc.Game;
 import net.minecraft.nbt.NBTTagCompound;
@@ -132,7 +132,7 @@ public class TileDigitalControllerBox extends TileDigitalBoxBase implements ICon
 
 
 	private Object[] setAspect(String name, int aspectIndex) {
-		if(aspectIndex > 0 && aspectIndex < SignalAspect.VALUES.length) {
+		if(aspectIndex > 0 && aspectIndex <= SignalAspect.VALUES.length) {
 			SignalAspect aspect = SignalAspect.fromOrdinal(aspectIndex - 1);
 			boolean success = this.controller.setAspectFor(name, aspect);
 			if(success) {
@@ -145,7 +145,7 @@ public class TileDigitalControllerBox extends TileDigitalBoxBase implements ICon
 	}
 
 	private Object[] setEveryAspect(int aspectIndex) {
-		if(aspectIndex > 0 && aspectIndex < SignalAspect.VALUES.length) {
+		if(aspectIndex > 0 && aspectIndex <= SignalAspect.VALUES.length) {
 			SignalAspect aspect = SignalAspect.fromOrdinal(aspectIndex - 1);
 			this.controller.setAspectForAll(aspect);
 			return new Object[] { true };
@@ -171,9 +171,9 @@ public class TileDigitalControllerBox extends TileDigitalBoxBase implements ICon
 	private static LinkedHashMap<Object, Object> aspectMap;
 
 	private static Object[] aspects() {
-		if(aspectMap == null) {
+		if (aspectMap == null) {
 			LinkedHashMap<Object, Object> newMap = new LinkedHashMap<Object, Object>();
-			for(int i = 0; i < SignalAspect.VALUES.length - 1; i++) {
+			for (int i = 0; i <= SignalAspect.VALUES.length - 1; i++) {
 				SignalAspect aspect = SignalAspect.VALUES[i];
 				String name = aspect.name().toLowerCase(Locale.ENGLISH);
 				newMap.put(name, aspect.ordinal() + 1);

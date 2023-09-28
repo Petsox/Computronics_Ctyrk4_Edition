@@ -32,7 +32,7 @@ public class MassiveSignalReceiver extends SignalReceiver {
 	private SignalAspect mostRestrictive;
 
 	public MassiveSignalReceiver(String locTag, TileEntity tile) {
-		super(locTag, tile, 32);
+		super(locTag, tile, 128);
 	}
 
 	public SignalAspect getAspectFor(WorldCoordinate coord) {

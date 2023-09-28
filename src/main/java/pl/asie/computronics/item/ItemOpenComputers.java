@@ -41,7 +41,6 @@ import pl.asie.computronics.oc.driver.RobotUpgradeCamera;
 import pl.asie.computronics.oc.driver.RobotUpgradeChatBox;
 import pl.asie.computronics.oc.driver.RobotUpgradeColorful;
 import pl.asie.computronics.oc.driver.RobotUpgradeRadar;
-import pl.asie.computronics.oc.driver.RobotUpgradeSpeech;
 import pl.asie.computronics.oc.manual.IItemWithDocumentation;
 import pl.asie.computronics.reference.Config;
 import pl.asie.computronics.reference.Mods;
@@ -157,8 +156,6 @@ public class ItemOpenComputers extends ItemMultiple implements Item, Environment
 				return DriverBoardCapacitor.class;
 			case 13:
 				return DriverBoardSwitch.class;
-			case 14:
-				return RobotUpgradeSpeech.class;
 			default:
 				return null;
 		}
@@ -197,8 +194,6 @@ public class ItemOpenComputers extends ItemMultiple implements Item, Environment
 				return container instanceof Rack ? new DriverBoardCapacitor((Rack) container) : null;
 			case 13:
 				return container instanceof Rack ? new DriverBoardSwitch((Rack) container) : null;
-			case 14:
-				return new RobotUpgradeSpeech(container);
 			default:
 				return null;
 		}

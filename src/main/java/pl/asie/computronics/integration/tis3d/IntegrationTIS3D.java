@@ -9,7 +9,6 @@ import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.MinecraftForgeClient;
 import pl.asie.computronics.Computronics;
-import pl.asie.computronics.integration.flamingo.DriverFlamingo;
 import pl.asie.computronics.integration.tis3d.item.ItemModules;
 import pl.asie.computronics.integration.tis3d.manual.ComputronicsPathProvider;
 import pl.asie.computronics.integration.tis3d.module.ComputronicsModuleRenderer;
@@ -50,11 +49,6 @@ public class IntegrationTIS3D {
 		ComputronicsPathProvider.initialize();
 		ModuleAPI.addProvider(itemModules);
 
-		if(Mods.isLoaded(Mods.Flamingo)) {
-			if(compat.isCompatEnabled(Compat.Flamingo)) {
-				SerialAPI.addProvider(new DriverFlamingo.TISInterfaceProvider());
-			}
-		}
 	}
 
 	@Optional.Method(modid = Mods.TIS3D)

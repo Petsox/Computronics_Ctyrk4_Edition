@@ -34,7 +34,7 @@ public class MassiveSignalController extends SignalController {
 	private SignalAspect mostRestrictive;
 
 	public MassiveSignalController(String locTag, TileEntity tile) {
-		super(locTag, tile, 32);
+		super(locTag, tile, 128);
 		this.needsInit = true;
 	}
 

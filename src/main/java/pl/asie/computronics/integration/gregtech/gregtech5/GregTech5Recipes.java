@@ -53,13 +53,6 @@ public class GregTech5Recipes extends ModRecipes {
 				's', Computronics.audioCable != null ? new ItemStack(Computronics.audioCable, 1, 0) : "cableGt02Silver",
 				'c', "screwSteel", 'w', "craftingToolScrewdriver");
 		}
-		if(Computronics.speechBox != null) {
-			RecipeUtils.addShapedRecipe(new ItemStack(Computronics.speechBox, 1, 0),
-				"crc", "mim", "tat", 'i', ItemList.Hull_MV.get(1), 'r', "circuitElite",
-				'a', Computronics.speaker != null ? Computronics.speaker : Computronics.ironNote != null ? Computronics.ironNote : Blocks.noteblock,
-				'm', "plateSilicon", 't', "wireGt02Gold", 'c', "screwAluminium"
-			);
-		}
 		if(Computronics.tapeReader != null) {
 			RecipeUtils.addShapedRecipe(new ItemStack(Computronics.tapeReader, 1, 0),
 				"trt", "mim", "cac", 'i', ItemList.Hull_LV.get(1), 'r', "circuitBasic",
@@ -189,9 +182,6 @@ public class GregTech5Recipes extends ModRecipes {
 			"srs", "fff", "hch", 's', "foilStainlessSteel", 'f', "foilChromiumDioxide", 'c', "craftingToolWireCutter", 'r', "ringNiobiumTitanium", 'h', "cellArgon");
 
 		//ChromiumDioxide(255, Textures.SET_DULL, 11.0F, 256, 3, 1 | 2, 230, 200, 200, 0, "ChromiumDioxide", 0, 0, 0, 0, 375, 0, false, false, 1, 1, 1, Dyes.dyePink, 1, Arrays.asList(new MaterialStack(Materials.Chrome, 1), new MaterialStack(Materials.Oxygen, 2)), Arrays.asList(new TC_Aspects.TC_AspectStack(TC_Aspects.METALLUM, 2), new TC_Aspects.TC_AspectStack(TC_Aspects.MACHINA, 1)));
-
-		GT_Mod.gregtechproxy.addFluid("Argon", "Argon", Materials.Argon,
-			2, 295, GT_OreDictUnificator.get(OrePrefixes.cell, Materials.Argon, 1L), GT_OreDictUnificator.get(OrePrefixes.cell, Materials.Empty, 1L), 1000);
 
 		//Nope.
 		Materials.ChromiumDioxide.mBlastFurnaceRequired = false;

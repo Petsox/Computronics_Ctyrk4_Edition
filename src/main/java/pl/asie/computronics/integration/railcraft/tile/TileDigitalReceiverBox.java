@@ -210,7 +210,7 @@ public class TileDigitalReceiverBox extends TileDigitalBoxBase implements IRecei
 	private static Object[] aspects() {
 		if(aspectMap == null) {
 			LinkedHashMap<Object, Object> newMap = new LinkedHashMap<Object, Object>();
-			for(int i = 0; i < SignalAspect.VALUES.length - 1; i++) {
+			for(int i = 0; i <= SignalAspect.VALUES.length - 1; i++) {
 				SignalAspect aspect = SignalAspect.VALUES[i];
 				String name = aspect.name().toLowerCase(Locale.ENGLISH);
 				newMap.put(name, aspect.ordinal() + 1);

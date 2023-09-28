@@ -18,8 +18,6 @@ import org.apache.logging.log4j.Logger;
 import pl.asie.computronics.Computronics;
 import pl.asie.computronics.api.audio.AudioPacketRegistry;
 import pl.asie.computronics.audio.SoundCardPlaybackManager;
-import pl.asie.computronics.integration.appeng.DriverSpatialIOPort;
-import pl.asie.computronics.integration.armourersworkshop.DriverMannequin;
 import pl.asie.computronics.integration.betterstorage.DriverCrateStorageNew;
 import pl.asie.computronics.integration.betterstorage.DriverCrateStorageOld;
 import pl.asie.computronics.integration.buildcraft.DriverHeatable;
@@ -40,7 +38,6 @@ import pl.asie.computronics.integration.enderio.DriverTransceiver;
 import pl.asie.computronics.integration.enderio.DriverVacuumChest;
 import pl.asie.computronics.integration.enderio.DriverWeatherObelisk;
 import pl.asie.computronics.integration.factorization.DriverChargeConductor;
-import pl.asie.computronics.integration.flamingo.DriverFlamingo;
 import pl.asie.computronics.integration.forestry.IntegrationForestry;
 import pl.asie.computronics.integration.fsp.DriverSteamTransporter;
 import pl.asie.computronics.integration.gregtech.gregtech5.DriverBaseMetaTileEntity;
@@ -84,7 +81,6 @@ import static pl.asie.computronics.Computronics.ironNote;
 import static pl.asie.computronics.Computronics.proxy;
 import static pl.asie.computronics.Computronics.radar;
 import static pl.asie.computronics.Computronics.speaker;
-import static pl.asie.computronics.Computronics.speechBox;
 
 /**
  * @author Vexatos
@@ -273,16 +269,6 @@ public class IntegrationOpenComputers {
 				Driver.add(new DriverDigitalChest());
 			}
 		}
-		if(Mods.isLoaded(Mods.ArmourersWorkshop)) {
-			if(compat.isCompatEnabled(Compat.AW_Mannequins)) {
-				Driver.add(new DriverMannequin.OCDriver());
-			}
-		}
-		if(Mods.isLoaded(Mods.AE2)) {
-			if(compat.isCompatEnabled(Compat.AE2_SpatialIO)) {
-				Driver.add(new DriverSpatialIOPort.OCDriver());
-			}
-		}
 		if(Mods.isLoaded(Mods.EnderIO)) {
 			if(compat.isCompatEnabled(Compat.EnderIO)) {
 				Driver.add(new DriverRedstoneControllable.OCDriver());
@@ -315,12 +301,6 @@ public class IntegrationOpenComputers {
 		if(Mods.hasVersion(Mods.API.BuildCraftTiles, Mods.Versions.BuildCraftTiles)) {
 			if(compat.isCompatEnabled(Compat.BuildCraft_Drivers)) {
 				Driver.add(new DriverHeatable.OCDriver());
-			}
-		}
-
-		if(Mods.isLoaded(Mods.Flamingo)) {
-			if(compat.isCompatEnabled(Compat.Flamingo)) {
-				Driver.add(new DriverFlamingo.OCDriver());
 			}
 		}
 
@@ -484,18 +464,7 @@ public class IntegrationOpenComputers {
 				'p', "oc:materialCircuitBoardPrinted"
 			);
 		}
-		if(Config.OC_UPGRADE_SPEECH) {
-			if(speechBox != null) {
-				RecipeUtils.addShapedRecipe(new ItemStack(itemOCParts, 1, 14),
-					"idi", "mcm", "ibi",
-					'c', speechBox,
-					'd', "oc:materialTransistor",
-					'm', "oc:circuitChip2",
-					'i', "ingotIron",
-					'b', "oc:materialCircuitBoardPrinted"
-				);
-			}
-		}
+
 		if(Computronics.buildcraft != null) {
 			Computronics.buildcraft.postInitOC();
 		}

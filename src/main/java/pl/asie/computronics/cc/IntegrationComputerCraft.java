@@ -5,8 +5,6 @@ import dan200.computercraft.api.ComputerCraftAPI;
 import net.minecraftforge.common.config.Configuration;
 import pl.asie.computronics.Computronics;
 import pl.asie.computronics.cc.multiperipheral.MultiPeripheralProvider;
-import pl.asie.computronics.integration.appeng.DriverSpatialIOPort;
-import pl.asie.computronics.integration.armourersworkshop.DriverMannequin;
 import pl.asie.computronics.integration.buildcraft.DriverHeatable;
 import pl.asie.computronics.integration.cofh.DriverEnergyProvider;
 import pl.asie.computronics.integration.cofh.DriverEnergyReceiver;
@@ -26,7 +24,6 @@ import pl.asie.computronics.integration.enderio.DriverTransceiver;
 import pl.asie.computronics.integration.enderio.DriverVacuumChest;
 import pl.asie.computronics.integration.enderio.DriverWeatherObelisk;
 import pl.asie.computronics.integration.factorization.DriverChargeConductor;
-import pl.asie.computronics.integration.flamingo.DriverFlamingo;
 import pl.asie.computronics.integration.fsp.DriverSteamTransporter;
 import pl.asie.computronics.integration.mekanism.DriverStrictEnergyStorage;
 import pl.asie.computronics.integration.mfr.DriverDeepStorageUnit;
@@ -112,17 +109,6 @@ public class IntegrationComputerCraft {
 			}
 		}
 
-		if(Mods.isLoaded(Mods.ArmourersWorkshop)) {
-			if(compat.isCompatEnabled(Compat.AW_Mannequins)) {
-				registerMultiPeripheralProvider(new DriverMannequin.CCDriver());
-			}
-		}
-
-		if(Mods.isLoaded(Mods.AE2)) {
-			if(compat.isCompatEnabled(Compat.AE2_SpatialIO)) {
-				registerMultiPeripheralProvider(new DriverSpatialIOPort.CCDriver());
-			}
-		}
 
 		if(Mods.API.hasAPI(Mods.API.CoFHAPI_Energy)
 			&& compat.isCompatEnabled(Compat.RedstoneFlux)) {
@@ -162,12 +148,6 @@ public class IntegrationComputerCraft {
 		if(Mods.hasVersion(Mods.API.BuildCraftTiles, Mods.Versions.BuildCraftTiles)) {
 			if(compat.isCompatEnabled(Compat.BuildCraft_Drivers)) {
 				registerMultiPeripheralProvider(new DriverHeatable.CCDriver());
-			}
-		}
-
-		if(Mods.isLoaded(Mods.Flamingo)) {
-			if(compat.isCompatEnabled(Compat.Flamingo)) {
-				registerMultiPeripheralProvider(new DriverFlamingo.CCDriver());
 			}
 		}
 

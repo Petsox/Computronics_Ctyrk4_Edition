@@ -12,9 +12,13 @@ buildscript {
 		maven {
 			url = "https://jitpack.io"
 		}
+		maven {
+			url = "http://www.ryanliptak.com/maven/"
+		}
+
 	}
 	dependencies {
-		classpath 'com.github.CDAGaming:ForgeGradle:1c670759c5'
+		classpath 'com.github.GTNewHorizons:ForgeGradle:1.2.11'
 	}
 }
 
@@ -95,6 +99,14 @@ dependencies {
 	compileOnly "com.gregoriust.gregtech:gregtech_1.7.10:${config.gregtech6.version}:dev"
 	implementation "mcp.mobius.waila:Waila:${config.waila.version}:dev"
 	implementation "com.enderio.core:EnderCore:${config.endercore.version}:dev"
+	implementation "mod.industrialcraft2:ic2"
+	implementation "mod.forestry.api:forestry_1.7.10-4.4.0.0-dev"
+	implementation "mod.net.bdew.gendustry.api:gendustry"
+	implementation "mod.net.bdew.lib:bdew"
+	implementation "mod.gregtech.api:gregtech"
+	implementation "mod.buildcraft.api:buildcraft"
+	implementation "mod.thaumcraft.api:Thaumcraft"
+	implementation "mods.railcraft:Railcraft_1.7.10-9.12.2.0-dev"
 	implementation("com.enderio:EnderIO:${config.enderio.version}:dev") {
 		exclude module: "appliedenergistics2"
 		exclude module: "buildcraft"
@@ -106,15 +118,10 @@ dependencies {
 		exclude module: "EquivalentExchange3"
 		exclude module: "EnderCore"
 	}
-	implementation("net.sengir.forestry:forestry_1.7.10:${config.forestry.version}:dev") {
-		exclude module: "buildcraft"
-		exclude module: "industrialcraft-2"
-	}
-	implementation name: "buildcraft", version: "${config.buildcraft.version}", classifier: "dev"
-	implementation("appeng:appliedenergistics2:${config.ae2.version}:dev") {
+	compileOnly('curse.maven:openperipheralcore-228817:2386737') {
 		transitive = false
 	}
-	compileOnly "curse.maven:armourers-workshop:${config.am.version}"
+	compile "applecore:AppleCore:1.7.10-3.1.1:deobf"
 	//compileOnly("com.bluepowermod:BluePower:${config.bluepower.version}:deobf") {
 	//	transitive = false
 	//}
@@ -128,20 +135,7 @@ minecraft {
 	runDir = "eclipse"
 
 	replaceIn "pl/asie/computronics/Computronics.java"
-	replace "@VERSION@", "${config.computronics.version}"
-}
-
-sourceSets {
-	main {
-		output.resourcesDir = 'build/classes/java/main'
-	}
-}
-
-apply plugin: 'idea'
-idea {
-	module {
-		outputDir = file('build/classes/java/main')
-	}
+	replace "@VERSION@", "${config.computronics.version}-Ctyrk4-v.${config.ctyrk4.version}"
 }
 
 processResources {

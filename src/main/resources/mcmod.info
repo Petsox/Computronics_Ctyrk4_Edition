@@ -1,15 +1,15 @@
 [
 {
   "modid": "computronics",
-  "name": "Computronics",
-  "description": "A ComputerCraft/OpenComputers addon mod.",
+  "name": "Computronics-Ctyrk4 Edition",
+  "description": "A ComputerCraft/OpenComputers addon mod. Useless stuff removed and Railcraft fixed by Petsox Made for Ctyrk4 Server,
   "version": "${version}",
   "credits": "",
   "logoFile": "",
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": [ "asiekierka", "Techokami", "Vexatos" ],
+  "authorList": [ "asiekierka", "Techokami", "Vexatos", "Petsox" ],
   "parent":"",
   "screenshots": [],
   "dependencies": []

@@ -88,10 +88,6 @@ public class ComputronicsAchievements {
 		if(special) {
 			achievement.setSpecial();
 		}
-		if(independent) {
-			achievement.initIndependentStat();
-		}
-		achievement.registerStat();
 		this.achievementMap.put(key.getKey(), achievement);
 		return achievement;
 	}
