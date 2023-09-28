@@ -11,6 +11,15 @@
 
 
 Computronics is an addon for ComputerCraft and OpenComputers, also adding integration to a lot of other mods.
+### Ctyrk4 Edition
+Fixed Digital RailCraft Boxes so they can handle OFF aspect. Finally</br>
+
+Removed Flamingo stuff</br>
+Removed Applied Energistics 2 stuff</br>
+Removed Armourer's Workshop stuff</br>
+Removed MaryTTS stuff</br>
+</br>
+Due to dead repos.
 ### Downloads
 The mod's downloads can be found at https://wiki.vexatos.com/wiki:computronics.
 ### License
