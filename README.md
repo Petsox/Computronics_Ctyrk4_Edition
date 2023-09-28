@@ -13,13 +13,13 @@
 Computronics is an addon for ComputerCraft and OpenComputers, also adding integration to a lot of other mods.
 ### Ctyrk4 Edition
 
-Fixed Digital Boxes, so they can handle OFF aspects, Finally.
-Bumped max connections to 128 instead of 32.
+Fixed Digital Boxes, so they can handle OFF aspects, Finally.</br>
+Bumped max connections to 128 instead of 32.</br>
 
-Removed MaryTTS stuff
-Removed Applied Energ. stuff
-Removed Flamingo stuff
-Removed Armourer's workshop
+Removed MaryTTS stuff</br>
+Removed Applied Energ. stuff</br>
+Removed Flamingo stuff</br>
+Removed Armourer's workshop</br>
 
 ### Downloads
 The mod's downloads can be found at https://wiki.vexatos.com/wiki:computronics.
