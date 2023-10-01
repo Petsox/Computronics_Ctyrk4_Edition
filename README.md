@@ -12,7 +12,7 @@
 
 Computronics is an addon for ComputerCraft and OpenComputers, also adding integration to a lot of other mods.
 ### Ctyrk4 Edition
-Fixed Digital RailCraft Boxes so they can handle OFF aspect. Finally</br>
+Fixed Digital RailCraft Boxes so they can handle ALL aspects. Finally</br>
 
 Removed Flamingo stuff</br>
 Removed Applied Energistics 2 stuff</br>
