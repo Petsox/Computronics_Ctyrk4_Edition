@@ -106,7 +106,7 @@ dependencies {
 	implementation "mod.gregtech.api:gregtech"
 	implementation "mod.buildcraft.api:buildcraft"
 	implementation "mod.thaumcraft.api:Thaumcraft"
-	implementation "mods.railcraft:Railcraft_1.7.10-9.12.2.0-dev"
+	implementation "mod.railcraft:Railcraft_1.7.10-9.12.2.0-dev"
 	implementation("com.enderio:EnderIO:${config.enderio.version}:dev") {
 		exclude module: "appliedenergistics2"
 		exclude module: "buildcraft"

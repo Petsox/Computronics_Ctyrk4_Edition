@@ -153,6 +153,14 @@ public class TileDigitalControllerBox extends TileDigitalBoxBase implements ICon
 		throw new IllegalArgumentException("invalid aspect" + aspectIndex);
 	}
 
+	private Object[] getControllerName() {
+		String name = controller.getNameFor(this.controller);
+		if (name != null){
+			return new Object[]{ name };
+		}
+		throw new IllegalArgumentException("no valid controller found");
+	}
+
 	private Object[] removeSignal(String name) {
 		Collection<WorldCoordinate> coords = this.controller.getCoordsFor(name);
 		if(!coords.isEmpty()) {
@@ -202,7 +210,7 @@ public class TileDigitalControllerBox extends TileDigitalBoxBase implements ICon
 		return removeSignal(args.checkString(0));
 	}
 
-	@Callback(doc = "function():table; Returns a list containing the name of every paired receiver.", direct = true, limit = 32)
+	@Callback(doc = "function():table; Returns a list containing the name of every paired receiver.", direct = true, limit = 128)
 	@Optional.Method(modid = Mods.OpenComputers)
 	public Object[] getSignalNames(Context c, Arguments a) {
 		return getSignalNames();
@@ -214,10 +222,16 @@ public class TileDigitalControllerBox extends TileDigitalBoxBase implements ICon
 		return aspects();
 	}
 
+	@Callback(doc = "function():String; Returns RailCraft label name of the controller", direct = true, limit = 32)
+	@Optional.Method(modid = Mods.OpenComputers)
+	public Object[] getControllerName(Context c, Arguments a) {
+		return getControllerName();
+	}
+
 	@Override
 	@Optional.Method(modid = Mods.ComputerCraft)
 	public String[] getMethodNames() {
-		return new String[] { "setAspect", "setEveryAspect", "unpair", "getSignalNames", "aspects" };
+		return new String[] { "setAspect", "setEveryAspect", "unpair", "getSignalNames", "aspects", "getControllerName" };
 	}
 
 	@Override
