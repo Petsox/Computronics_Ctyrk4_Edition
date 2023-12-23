@@ -1,9 +1,11 @@
 buildscript {
 	repositories {
-		mavenCentral()
+		maven {
+			url "https://repo1.maven.org/maven2"
+		}
 		maven {
 			name = "forge"
-			url = "http://files.minecraftforge.net/maven"
+			url = "https://maven.minecraftforge.net/"
 		}
 		maven {
 			name = "sonatype"
@@ -65,7 +67,7 @@ repositories {
 	}
 	maven {
 		name = "Forestry and IC2 repo"
-		url = "http://maven.ic2.player.to/"
+		url = "http://maven2.ic2.player.to/"
 	}
 	maven {
 		name = "GregTech"
