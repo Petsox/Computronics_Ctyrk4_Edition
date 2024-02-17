@@ -36,7 +36,7 @@ file "build.properties" withReader {
 	ext.config = new ConfigSlurper().parse prop
 }
 
-version = "${config.minecraft.version}-${config.computronics.version}"
+version = "${config.minecraft.version}-${config.computronics.version}-Ctyrk4-v${config.ctyrk4.version}"
 group = "pl.asie.computronics" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "Computronics"
 
@@ -137,7 +137,7 @@ minecraft {
 	runDir = "eclipse"
 
 	replaceIn "pl/asie/computronics/Computronics.java"
-	replace "@VERSION@", "${config.computronics.version}-Ctyrk4-v.${config.ctyrk4.version}"
+	replace "@VERSION@", "${config.computronics.version}-Ctyrk4-v${config.ctyrk4.version}"
 }
 
 processResources {
