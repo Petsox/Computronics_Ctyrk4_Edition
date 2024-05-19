@@ -20,3 +20,6 @@
 !/libs/APIs.zip
 !/libs/ic2classic-api.zip
 !/libs/asielib.jar
+
+!/lib
+!/lib/*
