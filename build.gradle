@@ -172,6 +172,13 @@ jar {
 
 def libDir = './build/libs'
 
+task devJar ( type: Zip, dependsOn: jar ) {
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+	extension = 'jar'
+
+	classifier = 'dev'
+}
+
 task deobfJar(type: Jar) {
 	description = 'Creates a jar file containing the non-obfuscated class files'
 	classifier = 'deobf'
